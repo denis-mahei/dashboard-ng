@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #212121;
+}
+
+nav {
+  margin: 20px;
+}
+
+.linkRoute {
+  border: 1px solid #9f9e9e;
+  border-radius: 5px;
+  padding: 8px;
+  color: #f8f8f8;
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgba(68, 235, 185, 0.63);
+}
+
