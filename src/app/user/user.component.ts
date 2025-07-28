@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-user',
   template: `
-    @if (isLoggedIn) {
-      <span>Yes, the server is running!</span>
-    } @else {
-      <span>Access denied. Server is stoped</span>
-    }
+    <div [contentEditable]="isEditable"></div>
+
+    <button (click)="toggleEdit()">{{ isEditable ? 'Block' : 'Edit' }}</button>
   `,
+  styleUrl: 'user.component.scss',
 })
 export class UserComponent {
-  isLoggedIn = false;
+  isEditable = false;
+
+  toggleEdit() {
+    this.isEditable = !this.isEditable;
+  }
 }
