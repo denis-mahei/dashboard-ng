@@ -1,0 +1,26 @@
+<section>
+  <div class="container card__inner">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ user.avatar }}" alt="avatar" width="60" height="60"/>
+      </div>
+      <h2 class="card-title">{{ user.username }}</h2>
+      <p class="card-tag">{{ '@' + user.tag }}</p>
+      <p class="card-location">{{ user.location }}</p>
+      <ul class="card-list">
+        <li class="card-item">
+          <h3 class="card-list-title">Followers</h3>
+          <p class="card-list-value">{{ user.stats.followers }}</p>
+        </li>
+        <li class="card-item">
+          <h3 class="card-list-title">Views</h3>
+          <p class="card-list-value">{{ user.stats.views }}</p>
+        </li>
+        <li class="card-item">
+          <h3 class="card-list-title">Likes</h3>
+          <p class="card-list-value">{{ user.stats.likes }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
