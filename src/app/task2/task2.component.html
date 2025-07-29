@@ -1,1 +1,15 @@
-<p>task2 works!</p>
+<section>
+  <div class="container">
+    <ul class="friends-list">
+      @for (item of data; track item.id) {
+        <li class="friends-list-item">
+          <img class="friends-img" src="{{ item.avatar }}" alt="avatar" fill/>
+          <h3 class="friends-name">{{ item.name }}</h3>
+          <p class="friends-isOnline" [ngClass]="{ offline: !item.isOnline }">
+            {{ item.isOnline ? 'Online' : 'Offline' }}
+          </p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

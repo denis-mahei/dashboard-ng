@@ -91,3 +91,9 @@ p {
 section {
   padding: 100px 0;
 }
+
+.linkRoute.active {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #a4a8f6; /* або твій акцентний колір */
+}
