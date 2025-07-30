@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -10,6 +14,20 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   color: #fdfdfd;
   background-color: #242424;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: block;
 }
 
 section {

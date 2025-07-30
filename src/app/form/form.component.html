@@ -1,0 +1,13 @@
+<form (ngSubmit)="addContact()" style="display:flex; flex-direction: column">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="nameControl"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Phone</mat-label>
+    <input matInput [formControl]="phoneControl"/>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Add contact</button>
+</form>

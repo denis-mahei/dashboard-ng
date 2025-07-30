@@ -1,0 +1,28 @@
+<style>
+  .contacts-list {
+    display: flex;
+    gap: 20px;
+  }
+</style>
+
+<section>
+  <ul class="contacts-list">
+    <mat-card
+      *ngFor="let item of contacts; trackBy: trackById"
+      class="contacts-item"
+      style="padding: 20px; display: block"
+    >
+      <p>Name: {{ item.name }}</p>
+      <p>Phone: {{ item.phone }}</p>
+      <button
+        mat-button
+        color="warn"
+        (click)="onDeleteContact.emit(item.id)"
+        type="button"
+        style="margin: 0 auto"
+      >
+        DELETE
+      </button>
+    </mat-card>
+  </ul>
+</section>

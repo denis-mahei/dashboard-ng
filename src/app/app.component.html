@@ -1,26 +1,26 @@
+<!--/* STYLES */-->
+
+<style>
+  .toolbar-title {
+    text-transform: uppercase;
+  }
+</style>
+
+<!--/* STYLES */-->
+
 <header>
   <mat-toolbar color="primary">
-    <span class="toolbar-title">Sip Happens Café</span>
+    <span class="toolbar-title">Contact's manager app</span>
   </mat-toolbar>
 </header>
 <section>
-  <mat-card style="padding: 20px">
-    <mat-card-content>
-      <p style="margin-bottom: 24px">
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
-    </mat-card-content>
-    <app-options
-      (onLeaveFeedback)="updateFeedback($event)"
-      (onResetFeedback)="resetFeedback()"
-    ></app-options>
-    <mat-divider style="margin-bottom: 16px"></mat-divider>
-    <app-notification *ngIf="totalFeedback === 0"></app-notification>
-    <app-feedback
-      *ngIf="totalFeedback > 0"
-      [feedback]="feedback"
-    ></app-feedback>
-
-  </mat-card>
+  <mat-card-content>
+    <app-form (onAddContact)="handleAdd($event)"></app-form>
+  </mat-card-content>
+  <div style="padding: 20px">
+    <app-contact
+      [contacts]="contacts"
+      (onDeleteContact)="handleDelete($event)"
+    ></app-contact>
+  </div>
 </section>
