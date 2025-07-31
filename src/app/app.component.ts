@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { UserComponent } from './user/user.component';
 
 @Component({
   selector: 'app-root',
-  imports: [UserComponent],
+  imports: [],
   template: ` <app-user />`,
 })
 export class AppComponent {}
